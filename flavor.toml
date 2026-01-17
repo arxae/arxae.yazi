@@ -136,13 +136,14 @@ rules = [
     { mime = "{audio,video}/*", fg = "#8e6bc5", italic = true },
 
     # Archives
-    { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#e46876" },
+    { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#e4c168" },
 
     # Documents
-	{ mime = "application/pdf", fg = "#B80000" },
-	{ url = "*.xlsx", fg = "#008000" },
-	{ url = "*.docx", fg = "#4472C4" },
-	{ url = "*.pptx", fg = "#D35230" },
+	{ mime = "application/pdf", fg = "#B80000", bg = "#000000" },
+	{ url = "*.md", fg = "#ababab", bg = "#000000" },
+	{ url = "*.xlsx", fg = "#008000", bg = "#000000" },
+	{ url = "*.docx", fg = "#4472C4", bg = "#000000" },
+	{ url = "*.pptx", fg = "#D35230", bg = "#000000" },
 
     # Broken Links
     { url = "*", is = "orphan", fg = "#282C34", bg = "#c34043", crossed = true },
@@ -152,7 +153,30 @@ rules = [
     # Executables
     { url = "*", is = "exec", fg = "#76946a" },
 
-    # fallback
+	# Code files
+	{ mime = "application/{x-shellscript,x-python,x-ruby,x-javascript}", fg = "#ffbbbb" },
+	{ mime = "text/script.python", fg = "#ffbbbb" },
+	{ mime = "text/c", fg = "#ffbbbb" },
+	{ url = "*.sql", fg = "#ffbbbb" },
+	{ url = "*.cs", fg = "#ffbbbb" },
+	{ url = "*.lua", fg = "#ffbbbb" },
+	{ url = "*justfile*", fg = "#2C8493" },
+
+	# Project files
+	{ url = "*.csproj", fg = "#c2005c" },
+	{ url = "*.sln", fg = "#c2005c" },
+	{ url = "*.slnx", fg = "#c2005c" },
+
+	# ConfigFiles
+	{ url = "*.json", fg = "#9464b6" },
+	{ url = "*.yml", fg = "#9464b6" },
+	{ url = "*.yaml", fg = "#9464b6" },
+	{ url = "*.toml", fg = "#9464b6" },
+
+	# License
+	{ url = "*LICENSE*", fg = "#e5ff00" },
+
+    # Fallback
 	# Any of below for files not colored by the above
     { url = "*", fg = "#F0F4D8" },
     # { url = "*", fg = "#F2EAD3" },
