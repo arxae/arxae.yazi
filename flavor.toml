@@ -160,7 +160,7 @@ rules = [
 	{ url = "*.sql", fg = "#ffbbbb" },
 	{ url = "*.cs", fg = "#ffbbbb" },
 	{ url = "*.lua", fg = "#ffbbbb" },
-	{ url = "*justfile*", fg = "#2C8493" },
+	{ url = "*justfile*", fg = "#2C8493", bg = "#000000" },
 
 	# Project files
 	{ url = "*.csproj", fg = "#c2005c" },
